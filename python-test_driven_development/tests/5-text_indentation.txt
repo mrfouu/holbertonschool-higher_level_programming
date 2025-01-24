@@ -1,0 +1,15 @@
+>>> text = __import__('5-text_indentation').text_indentation
+
+>>> text()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text(9)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text("bonjour je suis la")
+bonjour je suis la
+
+>>> text(' ')
+

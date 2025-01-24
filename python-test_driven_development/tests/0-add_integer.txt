@@ -1,0 +1,43 @@
+>>> add_interger = __import__('0-add_integer').add_integer
+
+>>> add_interger(2,5)
+7
+
+>>> add_interger(-4,5)
+1
+
+>>> add_interger(0.75,6.25)
+6
+
+>>> add_interger(2,)
+100
+
+>>> add_interger(float('inf'), 9)
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+
+>>> add_interger(3, float('inf'))
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+
+>>> add_interger(3, float('nan'))
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
+
+>>> add_interger("&",2)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> add_interger(9,"d")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+>>> add_interger(None)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
