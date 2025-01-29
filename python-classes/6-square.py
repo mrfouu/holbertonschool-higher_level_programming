@@ -10,10 +10,10 @@ class Square:
 
         Args:
             size (int): La taille du côté du carré.
-            position (tuple): Coordonnées de position (décalage horizontal et vertical).
+            position (tuple): Coordonnées de position.
 
         Raises:
-            TypeError: Si size n'est pas un entier ou si position n'est pas un tuple de 2 entiers positifs.
+            TypeError: size x= as entier / pos pas tupke de 2entier
             ValueError: Si size est négatif.
         """
         self.size = size  # Utilisation du setter pour validation

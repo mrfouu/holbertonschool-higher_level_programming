@@ -10,7 +10,7 @@ class Square:
 
         Args:
             size (int): La taille du côté du carré.
-        
+
         Raises:
             TypeError: Si size n'est pas un entier.
             ValueError: Si size est négatif.

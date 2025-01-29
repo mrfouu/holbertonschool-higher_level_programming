@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-"""Définit une classe Square avec un attribut de taille et un calcul de l'aire."""
 
 
 class Square:
     """Représente un carré."""
-    
+
     def __init__(self, size=0):
         """Initialise un carré avec une taille donnée.
-        
+
         Arguments :
         size (int) : La taille du côté du carré (doit être un entier positif).
         """
