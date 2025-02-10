@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-""" Module that writes an object to a text file using json representation. """
+"""
+function that creates an Object from a “JSON file”
+"""
 import json
 
 
 def load_from_json_file(filename):
-    """writes an object to a text file using json representation."""
-    with open(filename) as f:
-        return json.load(f)
+    """
+    the function save_to_json_file
+    """
+    with open(filename, "r", encoding="utf-8") as file:
+        return json.load(file)

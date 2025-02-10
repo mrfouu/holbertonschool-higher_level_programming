@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-"""Append to a file."""
+
+"""student class."""
 
 
 class Student:
-    """represente un student."""
+    """student representation."""
+
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
         self.last_name = last_name
