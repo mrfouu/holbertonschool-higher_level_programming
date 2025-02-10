@@ -1,20 +1,30 @@
 #!/usr/bin/python3
 import csv
 import json
+"""
+This module provides functions for serializing and deserializing.
+"""
 
 
-def convert_csv_to_json(csv_filename):
-    """Function that writes an object to a text file using csv"""
-    with open(csv_filename, 'r') as file:
-        reader = csv.DictReader(file)
-        data = list(reader)
-        return json.dumps(data)
+def convert_csv_to_json(csv_filename: str) -> bool:
+    """
+    Converts a CSV file to a JSON file.
+    """
+    if not csv_filename.endswith('.csv'):
+        raise ValueError("The file must have a .csv extension.")
 
-    """Function that reads an object from a text file using json"""
-    with open(json_filename, 'w') as file:
-        json.dump(data, file)
-        print(f"Data  serialized and saved to '{json_filename}'")
+    try:
+        with open(csv_filename, 'r') as csv_file:
+            reader = csv.DictReader(csv_file)
+            data = [row for row in reader]
 
-    with open(json_filename, 'r') as file:
-        data = json.load(file)
-        return data
+        json_filename = csv_filename.replace('.csv', '.json')
+        with open(json_filename, 'w') as json_file:
+            json.dump(data, json_file, indent=4)
+
+        return True
+    except FileNotFoundError:
+        return False
+    except (PermissionError, OSError) as e:
+        print(f"An error occurred: {e}")
+        return False
