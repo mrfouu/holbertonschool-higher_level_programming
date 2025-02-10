@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import json
+
 """student class."""
 
 
@@ -7,12 +7,7 @@ class Student:
     """student representation."""
 
     def __init__(self, first_name, last_name, age):
-        """
-        Args:
-            first_name (str):
-            age (int):
-            last_name (str):
-        """
+        """Initializes a new Student."""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
