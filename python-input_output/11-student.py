@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+import json
 """student class."""
 
 
@@ -11,7 +11,7 @@ class Student:
         Args:
             first_name (str):
             age (int):
-            last_name (str):  
+            last_name (str):
         """
         self.first_name = first_name
         self.last_name = last_name
