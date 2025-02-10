@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Append to a file."""
+"""adds all arguments to a python list and saves them to a file"""
 
 
 import sys
